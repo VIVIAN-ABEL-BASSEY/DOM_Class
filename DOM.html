@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main class="main" id="main">
+        <h1 id = "onGod" >Help Me God</h1>
+        <h1 class="target">On a journey to the Top</h1>
+        <h1 class="wish">Make my path smooth  and lead me to the right path</h1>
+        <p class ="target" id="dream">My biggest dream is to become sucessful,live peacefully and enjoy life at it's peak with all my family alive and sucessful too</p>
+        <h2 class="target" id="target">This page tells more about me</h2>
+        <h3 class="target">My world greatest advantures</h3>
+        <button type="button" id="mybtn">click me</button>
+    </main>
+
+
+    <script>
+        //console.log(document)
+        // let element = document.querySelector("h1")//To tardget the first h1 on our html
+        //   element.innerHTML ="On my way to the Top,help me God"//to change the text of the first h1 found on the HTML
+        //  console.log(element.getAttribute("class")) // To tardget the class found in our h1
+        //  element.setAttribute("class","my_prayer") // To change the name of the class found on the h1,else if the h1 do not have a class created already it will ceate one
+        //  console.log(element)
+        
+        // let elementAll = document.querySelectorAll("h1")
+        // console.log(elementAll)
+        // console.log(elementAll[1].innerHTML)
+// NB .querySelector(anything) and .get(anything) functions almost the same way,there target the tag used but dont do anything with them until the are now instructed to do so
+        //paragraph = document.getElementById("dream")
+        // // console.log(paragraph.innerText)
+        //  contents = document.getElementsByClassName("target")
+        //  console.log(contents)
+        //  console.log(contents[0].innerHTML);
+
+        // let btn=document.getElementById("mybtn")
+        // btn.setAttribute("class", "click-btn-1");
+        // btn.setAttribute("disabled", " ")
+        // console.log(btn)
+        // btn.removeAttribute("disabled")
+        // console.log(btn)
+        // btn.style.color="blue";
+        // btn.style.fontSize="19px";
+        // btn.style.backgroundColor="red";
+        // btn.style.boxShadow="2px 3px 4px 5px black"
+        // btn.style.borderRadius="50%"
+        // btn.style.padding="10px"
+        // console.log("result is", btn);
+        // btn.addEventListener("click", ()=>{console.log("clickable")})
+
+        // //creating a new element with dom and adding a content/text on it
+
+         let dom_h1 = document.createElement("h1");
+         let h1_content=document.createTextNode("newly added to the web through dom");
+         dom_h1.appendChild(h1_content);
+         let parentElem=document.getElementById("main");
+         document.body.appendChild(dom_h1,parentElem);//use this to append or
+        // // parentElem.append(h1_content)// use this to append
+        //  parentElem.innerHTML ="<h1>welcome</h1>"
+        
+        // // to remove an element from the main
+        let childElem = document.getElementById("target");
+        parentElem.removeChild(childElem)
+    </script>
+</body>
+</html>

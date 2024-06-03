@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This page tells about how to add events to our web page</h1>
+        <div>
+            <p class="d-flex h-100"><strong>Key events</strong> try passing some keys</p>
+            <p id="log"></p>
+        </div>
+    <!-- there are 3 ways to add click events to our html are,check below  17-43 -->
+
+    <!-- method 1 blow-->
+    <button id="tester"onclick=firstMethod(this)>Alert 1</button>
+
+    <!-- method 2 blow -->
+    <button id="button">Alert 2</button>
+
+    <script>
+        function firstMethod(element){ //for first method
+            console.log(element.innerHTML);
+            element.setAttribute("disabled", true);
+            element.style.backgroundColor ="greenyellow"
+            alert("button1 clicked")
+        }
+
+        function secondMethod(){
+            let element1 = event.target
+            console.log(element1.innerHTML)
+            element1.setAttribute("disabled", true)
+            element1.style.backgroundColor="brown";
+            element1.style.color="white"
+            alert("button2 clicked")
+            
+        }
+        let btn = document.getElementById("button")
+        // btn.onclick = secondMethod
+        // // method 3
+        btn.addEventListener("click" , secondMethod); 
+        // btn.removeEventListener("click" ,secondMethod)//click listener ends here
+        
+        
+        // // keys event
+        // document.addEventListener("keydown" , logkey);
+        // let log =document.getElementById("log");
+
+        // function logkey(event){
+        //     log.textContent += " " + event.code;
+        // }
+    </script>
+</body>
+</html>

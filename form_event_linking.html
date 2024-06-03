@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="loginForm" onsubmit="return validateForm(event) ">
+        <label for="email">email:</label>
+        <input type="text" name="email" placeholder="first" />
+        <label for="password">Password:</label>
+        <input type="password" name="password" placeholder="*" />
+        <button type="submit">Login</button>
+        <button type="reset">cancel</button>
+    </form>
+
+    <script>
+        function validateForm(e) {
+            e.preventDefault()
+
+            let email = document.loginForm.email.value
+            let password = document.loginForm.password.value
+            
+            if (email.trim().length==0)
+                return alert('email is required')
+            if (password.trim().length < 5)
+                return alert('Password length should more than 5')
+            
+            
+            alert("email is: " + email + " password is: " + password);
+            console.log('email: ', email, ' Password: ', password)
+        }
+    </script>
+</body>
+</html>
